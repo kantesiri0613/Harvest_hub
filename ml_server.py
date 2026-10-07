@@ -31,6 +31,10 @@ except ImportError:
 app = Flask(__name__)
 app.secret_key = os.getenv('APP_SECRET_KEY') or os.urandom(32)
 
+app.config['SESSION_COOKIE_SECURE'] = True
+app.config['SESSION_COOKIE_SAMESITE'] = 'None'
+app.config['SESSION_COOKIE_HTTPONLY'] = True
+
 try:
     from flask_cors import CORS
 
