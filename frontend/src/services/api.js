@@ -1,6 +1,6 @@
 // HarvestHub API Client - connects React Frontend to Flask ML Backend
 
-const BASE_URL = ''; // Uses Vite proxy in development or direct host in production
+const BASE_URL = 'https://harvesthub-backend-vbrh.onrender.com';
 const sessionFetch = (url, options = {}) => fetch(url, { ...options, credentials: 'include' });
 
 export const api = {
